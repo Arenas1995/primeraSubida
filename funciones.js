@@ -2,6 +2,7 @@ const fs = require('fs');
 listaEstudiante = [];
 
 const crear = (estudiante) => {
+    listar();
     let estu = {
         nombre: estudiante.nombre,
         matematicas: estudiante.matematicas,
@@ -11,6 +12,15 @@ const crear = (estudiante) => {
     listaEstudiante.push(estu);
     console.log(listaEstudiante);
     guardar();
+}
+
+const listar = () => {
+    try {
+        listaEstudiante = require('./listado.json');
+    }catch(error){
+        listaEstudiante = [];
+    }
+    
 }
 
 const guardar = () => {
