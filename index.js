@@ -6,6 +6,27 @@ const funciones = require('./funciones');
 
 let comando = argv._[0];
 
-if(argv._[0]= 'crear'){
+switch(comando){
+    case 'crear':
     funciones.crear(argv);
+    break
+
+    case 'mostrar':
+    funciones.mostrar();    
+    break
+
+    case 'mostrarest':
+    funciones.mostrarest(argv.nombre);
+    break
+
+    case 'mostrarmat':
+    funciones.mostrarmat();
+    break 
+    
+    case 'mostrarpromedio':
+    funciones.mostrarpromedio(argv.nombre);
+    break
+
+    default:
+    console.log('No ingreso una funcion existente')
 }

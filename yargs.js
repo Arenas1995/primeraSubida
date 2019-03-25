@@ -25,8 +25,20 @@ const creacion = {
     programacion
 }
 
+const mostarest = {
+    nombre
+}
+
+const mostrarpromedio = {
+    nombre
+}
+
 const argv = require('yargs')
             .command('crear', 'Crear un estudiante en la base de datos', creacion)
+            //.command('mostrar', 'Mostrar los estudiante y sus notas') si no tiene argumentos que puede omitir
+            .command('mostrarest', 'Mostrar los estudiante y sus notas', mostarest)
+            //.command('mostrarmat', 'Mostrar los estudiante que ganaron matematicas')
+            .command('mostrarpromedio', 'Mostrar los estudiante y sus notas', mostrarpromedio)
             .argv;
 
 module.exports = {
